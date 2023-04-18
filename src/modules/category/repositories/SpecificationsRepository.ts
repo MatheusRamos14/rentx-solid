@@ -4,7 +4,17 @@ import { ICreateSpecificationDTO, ISpecificationRepository } from "./ISpecificat
 class SpecificationRepository implements ISpecificationRepository {
     private specifications: Specification[];
 
-    constructor() {
+    public static INSTANCE: SpecificationRepository;
+
+    public static getInstance(): SpecificationRepository {
+        if (!SpecificationRepository.INSTANCE) {
+            SpecificationRepository.INSTANCE = new SpecificationRepository();
+        }
+
+        return SpecificationRepository.INSTANCE;
+    }
+
+    private constructor() {
         this.specifications = [];
     }    
     list(): Specification[] {
