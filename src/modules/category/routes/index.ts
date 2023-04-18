@@ -1,4 +1,5 @@
 import { Router } from "express";
+import multer from 'multer';
 
 import { categoriesRouter } from "./category.route";
 import { specificationRouter } from "./specification.route";
