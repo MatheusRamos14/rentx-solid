@@ -1,4 +1,4 @@
-import { CategoriesReposity } from "../../repositories/CategoriesRepository";
+import { CategoriesReposity } from "../../repositories/implementations/CategoriesRepository";
 import { CreateCategoryUseCase } from "./CreateCategoryUseCase";
 import { CreateCategoryController } from "./CreateCategoryController";
 
