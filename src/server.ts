@@ -1,11 +1,10 @@
 import express from 'express';
 
-import { categoriesRouter } from './modules/category/routes/category.route';
+import { router } from './modules/category/routes';
 
 const app = express();
 app.use(express.json())
 
-app.use('/categories', categoriesRouter)
-app.use('/specifications', categoriesRouter)
+app.use(router)
 
 export { app };
