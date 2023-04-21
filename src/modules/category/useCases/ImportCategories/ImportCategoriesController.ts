@@ -6,6 +6,7 @@ class ImportCategoriesController {
 
     handle(request: Request, response: Response) {
         const { file } = request;
+        if (!file) throw new Error("Invalid file or not found")
 
         this.importCategoriesUseCase.execute(file)
 
