@@ -312,6 +312,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/swagger-ui-express@npm:^4.1.3":
+  version: 4.1.3
+  resolution: "@types/swagger-ui-express@npm:4.1.3"
+  dependencies:
+    "@types/express": "*"
+    "@types/serve-static": "*"
+  checksum: 1c990fa8c158f699c5443245383daef2c4b47efce715c105e67f9b88447cf23663774393fdeea7d5a6e97a83d6959b09129f19c4abca64abdb7db74517162295
+  languageName: node
+  linkType: hard
+
 "@types/uuid@npm:^9.0.1":
   version: 9.0.1
   resolution: "@types/uuid@npm:9.0.1"
@@ -1578,10 +1588,12 @@ __metadata:
   dependencies:
     "@types/express": ^4.17.17
     "@types/multer": ^1.4.7
+    "@types/swagger-ui-express": ^4.1.3
     "@types/uuid": ^9.0.1
     csv-parse: ^5.3.8
     express: ^4.18.2
     multer: ^1.4.5-lts.1
+    swagger-ui-express: ^4.6.2
     tsx: ^3.12.6
     typescript: ^5.0.4
     uuid: ^9.0.0
@@ -1806,6 +1818,24 @@ __metadata:
   dependencies:
     ansi-regex: ^5.0.1
   checksum: f3cd25890aef3ba6e1a74e20896c21a46f482e93df4a06567cebf2b57edabb15133f1f94e57434e0a958d61186087b1008e89c94875d019910a213181a14fc8c
+  languageName: node
+  linkType: hard
+
+"swagger-ui-dist@npm:>=4.11.0":
+  version: 4.18.2
+  resolution: "swagger-ui-dist@npm:4.18.2"
+  checksum: 3d3e801104af53a58662303aa82df81510cece64a28422e6de02b5d22eb5f6a354f3c3ab80d12f72442e0ec8cbae9122767d7f8476c4d4a21d5353163bc659a7
+  languageName: node
+  linkType: hard
+
+"swagger-ui-express@npm:^4.6.2":
+  version: 4.6.2
+  resolution: "swagger-ui-express@npm:4.6.2"
+  dependencies:
+    swagger-ui-dist: ">=4.11.0"
+  peerDependencies:
+    express: ">=4.0.0"
+  checksum: 3883dc9243ef3fd050ea99edfa14c686dd3477b1ca81655d9c49347b71a540e266fc658b5b6f936c3f9192f224e4cff41bc3d17ab325e9e110a19f0abec551b6
   languageName: node
   linkType: hard
 
