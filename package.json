@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx tsx watch src/app.ts"
+    "dev": "npx tsx watch src/app.ts",
+    "typeorm": "tsx ./node_modules/typeorm/cli"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
     "csv-parse": "^5.3.8",
     "express": "^4.18.2",
     "multer": "^1.4.5-lts.1",
+    "pg": "^8.10.0",
     "swagger-ui-express": "^4.6.2",
     "tsx": "^3.12.6",
     "typeorm": "0.2.45",
