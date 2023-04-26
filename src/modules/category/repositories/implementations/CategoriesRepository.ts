@@ -6,18 +6,8 @@ import { ICategoriesRepository, ICreateCategoryDTO } from "../ICategoriesReposit
 class CategoriesReposity implements ICategoriesRepository {
     private repository: Repository<Category>;
 
-    public static INSTANCE: CategoriesReposity;
-
-    private constructor() {
+    constructor() {
         this.repository = getRepository(Category);
-    }
-
-    public static getInstance(): CategoriesReposity {
-        if (!CategoriesReposity.INSTANCE) {
-            CategoriesReposity.INSTANCE = new CategoriesReposity();
-        }
-
-        return CategoriesReposity.INSTANCE;
     }
 
     async create({ name, description }: ICreateCategoryDTO): Promise<void> {

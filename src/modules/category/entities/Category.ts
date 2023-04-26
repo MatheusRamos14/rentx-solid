@@ -3,16 +3,16 @@ import { Entity, PrimaryColumn, Column, CreateDateColumn } from 'typeorm';
 
 @Entity("categories")
 class Category {
-    @PrimaryColumn()
+    @PrimaryColumn({ type: 'uuid' })
     id?: string;
     
-    @Column()
+    @Column({ type: 'varchar' })
     name: string;
     
-    @Column()
+    @Column({ type: 'varchar' })
     description: string;    
     
-    @CreateDateColumn()
+    @CreateDateColumn({ type: 'date' })
     created_at: Date;
 
     constructor() {
