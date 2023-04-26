@@ -15,6 +15,7 @@ categoriesRouter.post("/", (request, response) => {
 })
 
 categoriesRouter.get("/", (request, response) => {
+    console.log("Listing!")
     return listCategoryController.handle(request, response);
 })
 
