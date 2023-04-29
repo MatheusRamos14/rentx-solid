@@ -1,17 +1,22 @@
+import { inject, injectable } from "tsyringe";
 import { loadCategories, ICategory } from "../../../../utils/loadCategories";
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 
+@injectable()
 class ImportCategoriesUseCase {
-    constructor(private categoriesRepository: ICategoriesRepository) { }
+    constructor(
+        @inject("CategoriesRepository")
+        private categoriesRepository: ICategoriesRepository
+    ) { }
 
-    async execute(file: Express.Multer.File) {
+    async execute(file: Express.Multer.File): Promise<void> {
         const categories: ICategory[] = await loadCategories(file);
 
-        categories.forEach(category => {
-            const alreadyExists = this.categoriesRepository.findByName(category.name);
+        categories.forEach(async category => {
+            const alreadyExists = await this.categoriesRepository.findByName(category.name);
 
             if (!alreadyExists) {
-                this.categoriesRepository.create(category);
+                await this.categoriesRepository.create(category);
             }
         })
     }

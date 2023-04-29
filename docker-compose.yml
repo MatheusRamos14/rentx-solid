@@ -9,9 +9,7 @@ services:
     environment:
       - POSTGRES_USER=docker
       - POSTGRES_PASSWORD=ignite
-      - POSTGRES_DB=rentx
-    volumes:
-      - pgdata:/data/postgres
+      - POSTGRES_DB=rentx  
 
   # rentx:
   #   build: .
@@ -22,7 +20,3 @@ services:
   #     - database
   #   depends_on:
   #     - database
-
-volumes:
-  pgdata:
-    driver: local
