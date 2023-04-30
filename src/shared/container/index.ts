@@ -6,6 +6,9 @@ import { CategoriesReposity } from '../../modules/category/repositories/implemen
 import { ISpecificationRepository } from '../../modules/category/repositories/ISpecificationsRepository';
 import { SpecificationRepository } from '../../modules/category/repositories/implementations/SpecificationsRepository';
 
+import { IUsersRepository } from '../../modules/accounts/repositories/IUsersRepository';
+import { UsersRepository } from '../../modules/accounts/repositories/implementations/UsersRepository';
+
 container.registerSingleton<ICategoriesRepository>(
     "CategoriesRepository",
     CategoriesReposity
@@ -14,4 +17,9 @@ container.registerSingleton<ICategoriesRepository>(
 container.registerSingleton<ISpecificationRepository>(
     "SpecificationRepository",
     SpecificationRepository
+)
+
+container.registerSingleton<IUsersRepository>(
+    "UsersRepository",
+    UsersRepository
 )

@@ -4,7 +4,7 @@ import express from 'express';
 import swaggerUI from 'swagger-ui-express';
 
 import swaggerJSON from './swagger.json';
-import { router } from './modules/category/routes';
+import { router } from './routes';
 
 import './shared/container';
 import './database';
