@@ -6,7 +6,7 @@ import { ImportCategoriesUseCase } from "./ImportCategoriesUseCase";
 class ImportCategoriesController {
     async handle(request: Request, response: Response): Promise<Response> {
         const { file } = request;
-        if (!file) throw new Error("Invalid file or not found")
+        if (!file) throw new Error("Invalid file or not found", 400)
 
         const importCategoriesUseCase = container.resolve(ImportCategoriesUseCase)
 
