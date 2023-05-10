@@ -18,6 +18,9 @@ class User {
     @Column({ type: 'varchar' })
     driver_license: string;
 
+    @Column({ type: 'varchar' })
+    avatar: string;
+
     @Column({ type: 'boolean' })
     admin: boolean;
 
