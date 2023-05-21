@@ -1,7 +1,7 @@
 import "reflect-metadata";
-import { AppError } from "../../../../shared/errors/AppError";
-import { CreateCategoryUseCase } from "./CreateCategoryUseCase";
-import { CategoriesRepositoryInMemory } from "../../repositories/InMemory/CategoriesRepositoryInMemory";
+import { AppError } from "@shared/errors/AppError";
+import { CreateCategoryUseCase } from "@modules/cars/useCases/CreateCategory/CreateCategoryUseCase";
+import { CategoriesRepositoryInMemory } from "@modules/cars/repositories/InMemory/CategoriesRepositoryInMemory";
 
 describe('Create category', () => {
     let createCategoryUseCase: CreateCategoryUseCase;
